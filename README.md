@@ -4,7 +4,11 @@ Minimal demonstration of XR (foreign language) interface with XRPython.
 
 ## Idea
 
-We have some Python functionality (in `src`) that we want to use in R. The key is to generate `ProxyClasses` and `ProxyFunctions` that wrap this API. In particular the src repo needs to be added to the Python path, s.t. the modules can be imported. The `setPythonClass()` and `setPythonFunction()` calls require access to metadata and therefore need to be called in a load action. Alternatively, we could use a setup step (`src/tools` script) that generates the source code during development. For the latter approach you can refer to the `shakespeare` package (https://github.com/johnmchambers/shakespeare/).
+We have some Python functionality (in `inst/python`) that we want to use in R. The key is to generate `ProxyClasses` and `ProxyFunctions` that wrap this API. In particular the src repo needs to be added to the Python path, s.t. the modules can be imported. The `setPythonClass()` and `setPythonFunction()` calls require access to metadata and therefore need to be called in a load action. Alternatively, we could use a setup step (`inst/tools` script) that generates the source code during development. For the latter approach you can refer to the `shakespeare` package (https://github.com/johnmchambers/shakespeare/).
+
+## Might be of interest
+
+The `XRPython` package uses `reticulate` under the hood (but conveys the idea of the `XR` interface structure). Reticulate uses an **embedded** Python interpreter. You can refer to the `src` folder for a minimal hint how this works. An alternative would be to use an **external** process (s.a. the `XRJulia` package). In particular, this would be non-blocking but the IPC might be a little less efficient than when embedded... (?)
 
 ## Some issues (notes to myself)
 
