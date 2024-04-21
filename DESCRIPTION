@@ -1,0 +1,15 @@
+Package: XRPyApp
+Title: Minimal demonstration of XR interface with XRPython
+Version: 0.0.0.9000
+Authors@R: 
+    person("Daniel", "Heimgartner", , "d.heimgartners@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-0643-8690"))
+Description: Demonstrates how we can call python functionality (classes and functions) with help of the XRPython interface.
+  Further shows how and why load actions need to be specified.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports: 
+    XRPython
